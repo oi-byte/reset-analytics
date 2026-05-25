@@ -1,0 +1,79 @@
+name: Daily UOL enrichment pull
+
+on:
+  schedule:
+    # 10:45 UTC daily — 15 min after the GA4+GSC job. The concurrency group
+    # below guarantees we don't write to ga4_analysis.db at the same time.
+    - cron: "45 10 * * *"
+  workflow_dispatch:
+    inputs:
+      start:
+        description: "Start date (YYYY-MM-DD), optional"
+        required: false
+      end:
+        description: "End date (YYYY-MM-DD), optional"
+        required: false
+
+concurrency:
+  group: db-writer
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install google-analytics-data google-auth
+
+      - name: Restore UOL service-account key from secret
+        env:
+          UOL_SA_JSON: ${{ secrets.UOL_SA_JSON }}
+        run: |
+          mkdir -p .secrets
+          printf '%s' "$UOL_SA_JSON" > .secrets/uol_sa.json
+          chmod 600 .secrets/*.json
+
+      - name: Run UOL cloud-mode pull
+        env:
+          UOL_SA_KEY_PATH: ${{ github.workspace }}/.secrets/uol_sa.json
+        run: |
+          if [ -n "${{ github.event.inputs.start }}" ] && [ -n "${{ github.event.inputs.end }}" ]; then
+            python uol_enrichment_pull.py --cloud-mode \
+              --start "${{ github.event.inputs.start }}" \
+              --end   "${{ github.event.inputs.end }}"
+          else
+            python uol_enrichment_pull.py --cloud-mode
+          fi
+
+      - name: Wipe credentials
+        if: always()
+        run: rm -rf .secrets
+
+      - name: Commit updated analysis DB
+        run: |
+          git config user.name  "reset-analytics-bot"
+          git config user.email "reset-analytics-bot@users.noreply.github.com"
+          # Pull first in case the GA4+GSC workflow committed between trigger and now
+          git pull --rebase --autostash
+          git add ga4_analysis.db
+          if git diff --staged --quiet; then
+            echo "No changes to ga4_analysis.db — skipping commit."
+          else
+            git commit -m "daily UOL enrichment refresh ($(date -u +%Y-%m-%d))"
+            git push
+          fi

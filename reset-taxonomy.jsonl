@@ -1,0 +1,44 @@
+{"slug": "agronegocio", "name": "AGRONEGÓCIO", "parent_slug": null, "parent_name": null, "post_count": 94}
+{"slug": "agricultura", "name": "AGRICULTURA", "parent_slug": "agronegocio", "parent_name": "AGRONEGÓCIO", "post_count": 40}
+{"slug": "pecuaria", "name": "PECUÁRIA", "parent_slug": "agronegocio", "parent_name": "AGRONEGÓCIO", "post_count": 14}
+{"slug": "proteinas-alternativas", "name": "PROTEÍNAS ALTERNATIVAS", "parent_slug": "agronegocio", "parent_name": "AGRONEGÓCIO", "post_count": 2}
+{"slug": "amazonia", "name": "AMAZÔNIA", "parent_slug": null, "parent_name": null, "post_count": 107}
+{"slug": "bioeconomia", "name": "BIOECONOMIA", "parent_slug": "amazonia", "parent_name": "AMAZÔNIA", "post_count": 24}
+{"slug": "desmatamento", "name": "DESMATAMENTO", "parent_slug": "amazonia", "parent_name": "AMAZÔNIA", "post_count": 29}
+{"slug": "reflorestamento", "name": "REFLORESTAMENTO", "parent_slug": "amazonia", "parent_name": "AMAZÔNIA", "post_count": 30}
+{"slug": "biodiversidade", "name": "BIODIVERSIDADE", "parent_slug": null, "parent_name": null, "post_count": 33}
+{"slug": "cop-biodiversidade", "name": "COP BIODIVERSIDADE", "parent_slug": "biodiversidade", "parent_name": "BIODIVERSIDADE", "post_count": 4}
+{"slug": "carbono", "name": "CARBONO", "parent_slug": null, "parent_name": null, "post_count": 98}
+{"slug": "creditos-de-carbono", "name": "CRÉDITOS DE CARBONO", "parent_slug": "carbono", "parent_name": "CARBONO", "post_count": 50}
+{"slug": "mercado-regulado-de-carbono", "name": "MERCADO REGULADO", "parent_slug": "carbono", "parent_name": "CARBONO", "post_count": 16}
+{"slug": "clima", "name": "CLIMA", "parent_slug": null, "parent_name": null, "post_count": 229}
+{"slug": "ciencia", "name": "CIÊNCIA", "parent_slug": "clima", "parent_name": "CLIMA", "post_count": 6}
+{"slug": "cop", "name": "COP", "parent_slug": "clima", "parent_name": "CLIMA", "post_count": 181}
+{"slug": "conteudo-patrocinado", "name": "CONTEÚDO DE MARCA", "parent_slug": null, "parent_name": null, "post_count": 45}
+{"slug": "desigualdade-social", "name": "DESIGUALDADE SOCIAL", "parent_slug": null, "parent_name": null, "post_count": 12}
+{"slug": "diversidade", "name": "DIVERSIDADE", "parent_slug": null, "parent_name": null, "post_count": 13}
+{"slug": "economia-circular", "name": "ECONOMIA CIRCULAR", "parent_slug": null, "parent_name": null, "post_count": 22}
+{"slug": "empresas", "name": "EMPRESAS", "parent_slug": null, "parent_name": null, "post_count": 250}
+{"slug": "companhias-abertas", "name": "COMPANHIAS ABERTAS", "parent_slug": "empresas", "parent_name": "EMPRESAS", "post_count": 60}
+{"slug": "governanca", "name": "GOVERNANÇA", "parent_slug": "empresas", "parent_name": "EMPRESAS", "post_count": 16}
+{"slug": "net-zero", "name": "NET ZERO", "parent_slug": "empresas", "parent_name": "EMPRESAS", "post_count": 31}
+{"slug": "startups", "name": "STARTUPS", "parent_slug": "empresas", "parent_name": "EMPRESAS", "post_count": 51}
+{"slug": "financas", "name": "FINANÇAS SUSTENTÁVEIS", "parent_slug": null, "parent_name": null, "post_count": 156}
+{"slug": "bancos", "name": "BANCOS", "parent_slug": "financas", "parent_name": "FINANÇAS SUSTENTÁVEIS", "post_count": 28}
+{"slug": "divida-esg", "name": "DÍVIDA ESG", "parent_slug": "financas", "parent_name": "FINANÇAS SUSTENTÁVEIS", "post_count": 30}
+{"slug": "inclusao-financeira", "name": "INCLUSÃO FINANCEIRA", "parent_slug": "financas", "parent_name": "FINANÇAS SUSTENTÁVEIS", "post_count": 2}
+{"slug": "investimentos", "name": "INVESTIMENTOS", "parent_slug": "financas", "parent_name": "FINANÇAS SUSTENTÁVEIS", "post_count": 78}
+{"slug": "guias", "name": "GUIAS", "parent_slug": null, "parent_name": null, "post_count": 0}
+{"slug": "newsletter", "name": "NEWSLETTER", "parent_slug": null, "parent_name": null, "post_count": 0}
+{"slug": "opiniao", "name": "OPINIÃO", "parent_slug": null, "parent_name": null, "post_count": 103}
+{"slug": "podcast", "name": "PODCAST", "parent_slug": null, "parent_name": null, "post_count": 13}
+{"slug": "regulacao", "name": "REGULAÇÃO", "parent_slug": null, "parent_name": null, "post_count": 88}
+{"slug": "reset-in-english", "name": "RESET IN ENGLISH", "parent_slug": null, "parent_name": null, "post_count": 7}
+{"slug": "transicao-energetica", "name": "TRANSIÇÃO ENERGÉTICA", "parent_slug": null, "parent_name": null, "post_count": 155}
+{"slug": "biocombustiveis", "name": "BIOCOMBUSTÍVEIS", "parent_slug": "transicao-energetica", "parent_name": "TRANSIÇÃO ENERGÉTICA", "post_count": 25}
+{"slug": "hidrogenio", "name": "HIDROGÊNIO", "parent_slug": "transicao-energetica", "parent_name": "TRANSIÇÃO ENERGÉTICA", "post_count": 5}
+{"slug": "minerais", "name": "MINERAIS", "parent_slug": "transicao-energetica", "parent_name": "TRANSIÇÃO ENERGÉTICA", "post_count": 12}
+{"slug": "petroleo-e-gas", "name": "PETRÓLEO E GAS", "parent_slug": "transicao-energetica", "parent_name": "TRANSIÇÃO ENERGÉTICA", "post_count": 34}
+{"slug": "solar-e-eolica", "name": "SOLAR E EÓLICA", "parent_slug": "transicao-energetica", "parent_name": "TRANSIÇÃO ENERGÉTICA", "post_count": 17}
+{"slug": "transportes", "name": "TRANSPORTES", "parent_slug": "transicao-energetica", "parent_name": "TRANSIÇÃO ENERGÉTICA", "post_count": 23}
+{"slug": "verdinhas", "name": "VERDINHAS", "parent_slug": null, "parent_name": null, "post_count": 17}

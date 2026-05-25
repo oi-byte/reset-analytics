@@ -1,0 +1,58 @@
+# ──────────────────────────────────────────────────────────────────────
+# reset-analytics .gitignore
+#
+# Rule of thumb:
+#   - The committed analysis DB (ga4_analysis.db) is the system of record
+#     in CI and IS tracked. Everything else binary or secret is ignored.
+# ──────────────────────────────────────────────────────────────────────
+
+# All databases by default — then explicitly allow ga4_analysis.db
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+!ga4_analysis.db
+
+# Credentials, tokens, service-account keys — never commit
+*.json
+!reset-taxonomy.jsonl
+ga4_token.json
+ga reader key.json
+claude-search-console-*.json
+*credentials*.json
+*service-account*.json
+*sa-key*.json
+.env
+.env.*
+
+# Local data archives (CSV pulls, etc.)
+API pulls/
+api_pulls/
+*.csv
+*.tsv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local dry-run / scratch outputs
+scratch/
+tmp/
+*.log
